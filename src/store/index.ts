@@ -13,15 +13,17 @@ import {
 } from 'redux-persist'
 import promiseMiddleware from 'redux-promise'
 
-import appReducer from './slicers/appSlicer'
+import appReducer from '@/store/slicers/appSlicer'
+import userReducer from '@/store/slicers/userSlicer'
+import  tabReducer from '@/store/slicers/tabSlicer'
 
 //slicer
 
 
 
 const reducer = combineReducers({
-  // tab: ,
-  // user: ,
+  tab: tabReducer,
+  user: userReducer,
   app: appReducer
 })
 
